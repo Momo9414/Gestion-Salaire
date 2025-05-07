@@ -1,0 +1,420 @@
+/* Style général du conteneur */
+.employee-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.employee-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* En-tête de la carte */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.icon-green {
+  color: #4caf50;
+  margin-right: 10px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Boutons */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 0.9rem;
+  gap: 6px;
+}
+
+.btn-excel {
+  background-color: #1d6f42;
+  color: white;
+}
+
+.btn-excel:hover {
+  background-color: #134f2d;
+}
+
+.btn-pdf {
+  background-color: #f44336;
+  color: white;
+}
+
+.btn-pdf:hover {
+  background-color: #d32f2f;
+}
+
+.btn-add {
+  background-color: #2196f3;
+  color: white;
+}
+
+.btn-add:hover {
+  background-color: #1976d2;
+}
+
+/* Barre de recherche */
+.search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.2);
+}
+
+.filter-month {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  gap: 8px;
+}
+
+.filter-month label {
+  font-weight: 500;
+  color: #555;
+}
+
+.month-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.month-select:focus {
+  outline: none;
+  border-color: #2196f3;
+}
+
+/* Tableau */
+.table-container {
+  overflow-x: auto;
+  padding: 0 15px 15px;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.employee-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #555;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.employee-table th:hover {
+  background-color: #f0f0f0;
+}
+
+/* Indicateurs de tri */
+.sort-ascending::after,
+.sort-descending::after {
+  content: '';
+  display: inline-block;
+  margin-left: 5px;
+  width: 0;
+  height: 0;
+  vertical-align: middle;
+}
+
+.sort-ascending::after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #555;
+}
+
+.sort-descending::after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #555;
+}
+
+/* Cellules de tableau */
+.employee-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Badges pour Type Salarié */
+.badge.type-m {
+  background-color: #4caf50;
+  color: white;
+}
+
+.badge.type-j {
+  background-color: #2196f3;
+  color: white;
+}
+
+.badge.type-h {
+  background-color: #ff9800;
+  color: white;
+}
+
+.badge.type-other {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Badges pour Branche Cotisée */
+.badge.branche-1 {
+  background-color: #e91e63;
+  color: white;
+}
+
+.badge.branche-2 {
+  background-color: #9c27b0;
+  color: white;
+}
+
+.badge.branche-3 {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.badge.branche-4 {
+  background-color: #009688;
+  color: white;
+}
+
+.badge.branche-5 {
+  background-color: #ff5722;
+  color: white;
+}
+
+.badge.branche-6 {
+  background-color: #795548;
+  color: white;
+}
+
+.badge.branche-7 {
+  background-color: #0da84d;
+  color: white;
+}
+
+.badge.branche-autre {
+  background-color: #9e9e9e;
+  color: white;
+}
+
+/* Style général des badges */
+.badge {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 50px;
+}
+
+/* Styles pour le bouton de légende */
+.btn-legend {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  color: #333;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.btn-legend:hover {
+  background-color: #e0e0e0;
+}
+
+.legend-btn{
+  padding: 1rem;
+}
+
+/* Conteneur de la légende */
+.legend-container {
+  background-color: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Sections de la légende */
+.legend-section {
+  margin-bottom: 15px;
+}
+
+.legend-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Items de la légende */
+.legend-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.legend-text {
+  color: #555;
+}
+
+/* Cellule des mois travaillés */
+.mois-cell {
+  max-width: 200px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Cellule d'actions */
+.actions-cell {
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  color: #555;
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 2px;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.btn-edit:hover {
+  color: #2196f3;
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.btn-delete:hover {
+  color: #f44336;
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+/* Message de tableau vide et chargement */
+.table-empty {
+  text-align: center;
+  padding: 30px 0;
+  color: #757575;
+  font-style: italic;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #2196f3;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 992px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .header-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .search-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .filter-month {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+  .search-input {
+    width: 100%;
+  }
+  
+  .month-select {
+    flex: 1;
+  }
+}
